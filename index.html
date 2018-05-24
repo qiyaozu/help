@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no, viewport-fit=cover" />
   <meta content="telephone=no" name="format-detection" />
   <title></title>
 </head>
@@ -10,6 +10,16 @@
 <body>
   <div id="app"></div>
   <!-- <script type=text/javascript src="./static/js/vconsole.js"></script> -->
+  <script type=text/javascript src="static/js/util.js"></script>
+  <script>
+    function isIphoneX(){
+      return /iphone/gi.test(navigator.userAgent) && (screen.height == 812 && screen.width == 375)
+    }
+    // alert('isIphoneX: ' + isIphoneX())
+    if( isIphoneX()) {
+      document.body.style.paddingBottom = 1.5 + 'rem'
+    }
+  </script>
 </body>
 
 </html>

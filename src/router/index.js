@@ -17,7 +17,42 @@ let router = new Router({
     {
       path: '/',
       name: '',
-      component: resolve => require(['@/pages/index.vue'], resolve)
+      component: resolve => require(['@/pages/index.vue'], resolve),
+      meta: {
+        title: '帮助中心'
+      }
+    },
+    {
+      path: '/tickling',
+      name: 'tickling',
+      component: resolve => require(['@/pages/tickling.vue'], resolve),
+      meta: {
+        title: '问题反馈'
+      }
+    },
+    {
+      path: '/search',
+      name: 'search',
+      component: resolve => require(['@/pages/search.vue'], resolve),
+      meta: {
+        title: '搜索'
+      }
+    },
+    {
+      path: '/question_detail',
+      name: 'question_detail',
+      component: resolve => require(['@/pages/question_detail.vue'], resolve),
+      meta: {
+        title: '帮助与反馈'
+      }
+    },
+    {
+      path: '/dirList',
+      name: 'dirList',
+      component: resolve => require(['@/pages/dirList.vue'], resolve),
+      meta: {
+        title: '帮助与反馈'
+      }
     }
   ],
   scrollBehavior (to, from, savedPosition) { // 默认滚动到顶部
@@ -27,6 +62,7 @@ let router = new Router({
 
 router.beforeEach((to, from, next) => {
   NProgress.start()
+  document.title = to.meta.title
   // let userInfo = localStorage.getItem('userInfo')
   // let user = getCookies('user', 'UserID')
   // if (!user && to.path !== '/login') {

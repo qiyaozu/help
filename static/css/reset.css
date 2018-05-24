@@ -100,7 +100,51 @@ input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
   color:#C1C1C1;
 }
 
-input, button {
+input, button, textarea {
   border: none;
   outline: none;
+}
+
+/* 全局placeholder的默认样式 */
+textarea::-webkit-input-placeholder{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color:#CECECE;
+}
+textarea::-moz-placeholder{   /* Mozilla Firefox 19+ */
+  font-size: 1.5rem;
+  font-weight: 600;
+  color:#CECECE;
+}
+textarea:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+  font-size: 1.5rem;
+  font-weight: 600;
+  color:#CECECE;
+}
+textarea:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+  font-size: 1.5rem;
+  font-weight: 600;
+  color:#CECECE;
+}
+
+input, button, textarea {
+  border: none;
+  outline: none;
+}
+
+.text_ellipsis1 {
+-webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+
+.text_ellipsis2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  /* white-space: nowrap; */
 }

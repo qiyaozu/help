@@ -5,13 +5,15 @@ import App from './App.vue'
 import router from './router'
 import '../static/js/rem'
 import '../static/css/reset.css'
-import { ToastPlugin, LoadingPlugin } from 'vux'
+import { ToastPlugin, LoadingPlugin, ConfirmPlugin } from 'vux'
 // import 'swiper/dist/css/swiper.css'
 import { chPost, chGet } from './interface'
 
 Vue.config.productionTip = false
 Vue.use(ToastPlugin)
 Vue.use(LoadingPlugin)
+Vue.use(ConfirmPlugin)
+
 Vue.prototype.chPost = chPost
 Vue.prototype.chGet = chGet
 /* eslint-disable no-new */

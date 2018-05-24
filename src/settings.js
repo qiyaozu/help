@@ -1,4 +1,4 @@
-let dev = false // 判断当前是开发还是测试
+let dev = true // 判断当前是开发还是测试
 let interFace, m // interFace 接口  m M站
 
 if (dev) {
